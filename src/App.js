@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import OptimizedImage from "./components/optimizedImage";
+
+//是非、参考してください
+//Image optimization tool: https://squoosh.app/
+// Webp supporting detection: https://modernizr.com/download
+// Document reference: https://css-tricks.com/using-webp-images/
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <OptimizedImage
+        src={require("./img/flowers-by-the-lake.webp")}
+        fallback={require("./img/flowers-by-the-lake.jpg")}
+        alt="flowers by the lake"
+      />
+      <div className="optimized-background"></div>
     </div>
   );
 }

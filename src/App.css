@@ -1,38 +1,25 @@
 .App {
   text-align: center;
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  width: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.optimized-background {
+  width: 500px;
+  height: 500px;
+  border: solid gray 1px;
+  background-repeat: no-repeat;
+  object-fit: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.webp .optimized-background {
+  background-image: url("./img/flowers-by-the-lake.webp");
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.no-webp .optimized-background {
+  background-image: url("./img/flowers-by-the-lake.jpg");
 }
